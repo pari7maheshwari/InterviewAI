@@ -23,3 +23,37 @@ People are more willing to sign up after understanding the value they'll receive
 
 ### Trade-off
 Some onboarding state must be temporarily stored before account creation.
+
+---
+
+## Decision 003 — Goal-Based Personalization
+
+### Decision
+
+The onboarding flow will first identify the user's goal before collecting profile details.
+
+### Why?
+
+A user's objective (e.g., internship, placement, job switch) has a greater impact on interview preparation than demographic information alone.
+
+### Trade-off
+
+The system must support multiple preparation paths, increasing personalization logic but resulting in a more relevant experience.
+
+---
+
+## Decision 004 — Graceful Handling of Edge Cases
+
+### Decision
+
+The platform should recover gracefully from incomplete profiles, invalid resumes, unrealistic goals, and missing information.
+
+### Why?
+
+Users should never reach a dead end during onboarding or interview preparation.
+
+### Examples
+
+- Invalid resume → Offer manual profile creation.
+- Advanced role for beginner → Recommend a progressive roadmap.
+- Skill mismatch → Ask clarifying questions before generating interviews.
