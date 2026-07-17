@@ -24,3 +24,28 @@
 - Edge cases are as important as the happy path.
 - A good product guides users instead of rejecting them.
 - Every failure should provide a recovery path.
+
+## Session 10
+
+### What I Learned
+
+- A User Journey describes what the user experiences.
+- A System Flow describes what the software does.
+- Every user action triggers multiple backend operations.
+- Product decisions directly influence architecture.
+
+## Decision 008 — Separate Candidate Profile from Interview Configuration
+
+### Decision
+
+Store permanent candidate information separately from interview-specific settings.
+
+### Why?
+
+A user can prepare for multiple companies and roles using the same profile without duplicating profile data.
+
+### Benefits
+
+- Reusable profile
+- Flexible interview preparation
+- Easier future expansion

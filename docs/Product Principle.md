@@ -36,3 +36,27 @@ The user's goal should influence every stage of the experience, including onboar
 ## Principle 7 — Guide, Don't Block
 
 When users provide incomplete, inconsistent, or unrealistic information, InterviewAI should guide them toward a better preparation path instead of preventing them from using the platform.
+
+---
+
+## Principle 8 — The Frontend Should Never Know the AI Provider
+
+The frontend communicates only with the backend. The backend abstracts the AI provider, allowing the application to switch between OpenAI, Gemini, Claude, or local models without changing the frontend.
+
+---
+
+## Principle 9 — Optimize for Today's Complexity
+
+Choose the simplest architecture that solves the current problem while allowing future growth. Avoid introducing unnecessary complexity before it is needed.
+
+---
+
+## Principle 10 — Retrieve Only Relevant Context
+
+The AI should receive only the information needed for the current task. Smaller, focused context improves response quality, reduces token usage, and lowers inference costs.
+
+---
+
+## Principle 11 — Understand Before You Abstract
+
+Build and understand the core logic before introducing frameworks that hide implementation details.

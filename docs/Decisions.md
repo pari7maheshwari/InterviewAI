@@ -57,3 +57,53 @@ Users should never reach a dead end during onboarding or interview preparation.
 - Invalid resume → Offer manual profile creation.
 - Advanced role for beginner → Recommend a progressive roadmap.
 - Skill mismatch → Ask clarifying questions before generating interviews.
+
+---
+
+## Decision 005 — Modular Monolith for Version 1
+
+### Decision
+
+Use a single FastAPI backend organized into feature-based modules instead of microservices.
+
+### Why?
+
+- Faster development
+- Easier debugging
+- Simpler deployment
+- Lower operational complexity
+- Ideal for a solo developer and MVP
+
+### Future
+
+If scaling requirements increase, modules with clear boundaries can be extracted into separate microservices.
+
+## Decision 006 — Delay Full RAG
+
+### Decision
+
+Version 1 will not use a vector database or full RAG architecture.
+
+### Why?
+
+The MVP primarily retrieves structured data owned by the application, making traditional database queries sufficient.
+
+### Future
+
+Introduce embeddings and vector search when supporting large collections of interview experiences, company documents, or learning resources.
+
+## Decision 007 — Use a State Machine Instead of LangGraph
+
+### Decision
+
+Version 1 will implement interview flow using a custom state machine rather than LangGraph.
+
+### Why?
+
+- The interview flow is relatively small and predictable.
+- A custom implementation is easier to understand, debug, and maintain.
+- It avoids introducing unnecessary framework complexity.
+
+### Future
+
+If InterviewAI evolves into a multi-agent platform with specialized AI components, LangGraph can be introduced to orchestrate those interactions.

@@ -27,3 +27,17 @@ Primary user goals include:
 - Improve interview confidence
 
 These goals influence interview difficulty, roadmap generation, feedback, and follow-up questions.
+
+## User Journey (High-Level)
+
+1. User visits InterviewAI.
+2. User understands the platform through a demo or overview.
+3. User selects their interview preparation goal.
+4. User selects a target role.
+5. User optionally selects a target company.
+6. User uploads a resume or manually creates a profile.
+7. InterviewAI generates a personalized preparation plan.
+8. User creates an account to save progress.
+9. User begins a personalized mock interview.
+10. User receives structured feedback and recommendations.
+11. User continues improving through future interview sessions.
