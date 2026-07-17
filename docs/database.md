@@ -35,3 +35,14 @@ Examples:
 - One user → Many interviews
 
 This design keeps the database scalable, easier to query, and easier to maintain.
+
+## One-to-Many Relationships
+
+The following relationships exist in InterviewAI:
+
+- One Candidate Profile → Many Skills
+- One Candidate Profile → Many Projects
+- One Candidate Profile → Many Experience Records
+- One Candidate Profile → Many Education Records
+
+These entities are stored in separate tables to avoid duplication, simplify updates, and support efficient querying.

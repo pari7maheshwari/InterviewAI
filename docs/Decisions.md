@@ -78,6 +78,8 @@ Use a single FastAPI backend organized into feature-based modules instead of mic
 
 If scaling requirements increase, modules with clear boundaries can be extracted into separate microservices.
 
+---
+
 ## Decision 006 — Delay Full RAG
 
 ### Decision
@@ -91,6 +93,8 @@ The MVP primarily retrieves structured data owned by the application, making tra
 ### Future
 
 Introduce embeddings and vector search when supporting large collections of interview experiences, company documents, or learning resources.
+
+---
 
 ## Decision 007 — Use a State Machine Instead of LangGraph
 
@@ -107,3 +111,57 @@ Version 1 will implement interview flow using a custom state machine rather than
 ### Future
 
 If InterviewAI evolves into a multi-agent platform with specialized AI components, LangGraph can be introduced to orchestrate those interactions.
+
+---
+
+## Decision 008 -  Model Interviews as Conversation Turns
+
+### Decision
+
+Store interview interactions in an `interview_turns` table rather than maintaining separate tables for questions, answers, and feedback.
+
+### Why?
+
+Each interview interaction naturally consists of:
+
+- AI Question
+- Candidate Answer
+- Evaluation
+- Score
+- Metadata
+
+Keeping these together simplifies retrieval, reflects the real interview flow, and reduces unnecessary joins.
+
+### Benefits
+
+- Easier debugging
+- Simpler backend queries
+- Cleaner frontend rendering
+- Better support for follow-up questions
+
+---
+
+## Decision 009 — Model Interviews as Conversation Turns
+
+### Decision
+
+Store interview interactions in an `interview_turns` table rather than maintaining separate tables for questions, answers, and feedback.
+
+### Why?
+
+Each interview interaction naturally consists of:
+
+- AI Question
+- Candidate Answer
+- Evaluation
+- Score
+- Metadata
+
+Keeping these together simplifies retrieval, reflects the real interview flow, and reduces unnecessary joins.
+
+### Benefits
+
+- Easier debugging
+- Simpler backend queries
+- Cleaner frontend rendering
+- Better support for follow-up questions
